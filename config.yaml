@@ -1,0 +1,28 @@
+core:
+  token: your_token
+
+  autoStart: true
+
+  gateway:
+    version: 6
+    encoding: json
+
+  api:
+    version: 6
+  
+  # options for shard connections
+  shard:
+    # amount of shards used
+    count: 1
+
+    # an array of specific shard arrays to connect.
+    # IF THIS IS AVAILABLE, "count" would be ignored
+    # example: [[0, 2], [1, 2]]
+    # each element is also an array, which the format is: [shard_id, max_shards]
+    shardArray: null
+
+    # interval in ms on connecting each shard
+    interval: 6500
+
+  # whether or not to use erlpack when unpacking the event data and sending event data
+  compress: false
